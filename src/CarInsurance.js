@@ -11,9 +11,6 @@ class CarInsurance {
     this.products.forEach(function(product) {
       product.updatePrice();
     });
-//    for (var i = 0; i < this.products.length; i++) {
-//      this.products[i].updatePrice();
-//    }
 
     return this.products;
   }

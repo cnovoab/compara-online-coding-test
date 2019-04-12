@@ -8,7 +8,7 @@ class MegaCoverage extends Product {
   updatePrice(){ /* DO NOT UPDATE PRICE */ }
 
   maxPrice() {
-    return 50;
+    return 80;
   }
 }
 
