@@ -20,10 +20,14 @@ class CarInsurance {
   updatePrice() {
     let new_price = this.price + this.step * this.factor();
 
-    if (new_price >= this.min_price && new_price <= this.max_price) {
-      this.price = new_price
+    if (new_price <= this.min_price) {
+      new_price = this.min_price;
+    }
+    else if (new_price >= this.max_price) {
+      new_price = this.max_price;
     }
 
+    this.price = new_price
     this.sellIn--
   }
 
