@@ -1,9 +1,12 @@
-const CarInsurance = require('./CarInsurance.js');
+const Product = require('./Product.js');
 
-class FullCoverage extends CarInsurance {
+class FullCoverage extends Product {
   constructor (name, sellIn, price) {
     super(name, sellIn, price);
-    this.step = 1;
+  }
+
+  step() {
+    return 1;
   }
 }
 

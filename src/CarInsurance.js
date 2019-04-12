@@ -1,36 +1,22 @@
+const ProductFactory = require('./ProductFactory');
+
 class CarInsurance {
-  constructor(name, sellIn, price, step = -1, min_price = 0, max_price = 50) {
-    this.name = name;
-    this.sellIn = sellIn;
-    this.step = step;
-
-    if (price >= min_price && price <= max_price) {
-      this.price = price;
-      this.min_price = min_price;
-      this.max_price = max_price;
-    } else {
-      throw new Error('Error: price is out of bounds');
-    }
-  }
-
-  factor() {
-    return this.sellIn > 0 ? 1 : 2;
+  constructor(products = []) {
+    this.products = products.map(function(product) {
+      return ProductFactory.create(product.name, product.sellIn, product.price)
+    });
   }
 
   updatePrice() {
-    let new_price = this.price + this.step * this.factor();
+    this.products.forEach(function(product) {
+      product.updatePrice();
+    });
+//    for (var i = 0; i < this.products.length; i++) {
+//      this.products[i].updatePrice();
+//    }
 
-    if (new_price <= this.min_price) {
-      new_price = this.min_price;
-    }
-    else if (new_price >= this.max_price) {
-      new_price = this.max_price;
-    }
-
-    this.price = new_price
-    this.sellIn--
+    return this.products;
   }
-
 }
 
-module.exports = CarInsurance;
+module.exports = CarInsurance

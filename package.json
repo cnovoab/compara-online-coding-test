@@ -1,0 +1,24 @@
+{
+  "name": "compara-online-coding-test",
+  "version": "1.0.0",
+  "description": "ComparaOnline NodeJS coding test",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha spec/*.js",
+    "after-30-days": "node after-30-days.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cnovoab/compara-online-coding-test.git"
+  },
+  "keywords": [
+    "comparaonline",
+    "coding-test"
+  ],
+  "author": "Claudio Novoa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cnovoab/compara-online-coding-test/issues"
+  },
+  "homepage": "https://github.com/cnovoab/compara-online-coding-test#readme"
+}

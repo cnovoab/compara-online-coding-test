@@ -1,4 +1,3 @@
-// const CarInsurance = require('./CarInsurance.js');
 const FullCoverage = require('./FullCoverage.js');
 
 class SpecialFullCoverage extends FullCoverage {
